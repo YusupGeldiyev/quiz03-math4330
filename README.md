@@ -90,3 +90,22 @@ def infNorm(vector):
   return norm
 vector1=[-3,4,-5]
 print(infNorm(vector1))
+
+# quiz 03 (5)
+def infNorm(vector):
+  norm=0
+  for i in range(len(vector)):
+    if norm<=abs(vector[i]):
+      norm=abs(vector[i])
+  return norm
+
+def normalize(vector):
+  norm=infNorm(vector)
+  normalizedvector=[]
+  for j in range(len(vector)):
+    nvector=((1/norm))*vector[j]
+    normalizedvector.append(nvector)
+  return normalizedvector
+vector1=[2,4,6]
+print(normalize(vector1))
+
