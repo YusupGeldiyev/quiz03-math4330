@@ -80,3 +80,13 @@ vector4=[1,3,5]
 print(scalarVecMulti(vector1,vector2))
 # the test values wtih scalar and  right vector, string and matrix are being checked.
 #print(vecSubtract(vector3,vector4))
+
+# quiz 03 (4)
+def infNorm(vector):
+  norm=0
+  for i in range(len(vector)):
+    if norm<=abs(vector[i]):
+      norm=abs(vector[i])
+  return norm
+vector1=[-3,4,-5]
+print(infNorm(vector1))
