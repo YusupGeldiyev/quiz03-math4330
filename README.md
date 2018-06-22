@@ -56,3 +56,27 @@ vector4=[1,3,5]
 print(vecSubtract(vector1,vector2))
 # the test values wtih right and not right vector sizes are being checked.
 #print(vecSubtract(vector3,vector4))
+
+# quiz03 (3)
+def scalarVecMulti(scalar,vector): 
+  '''
+This function takes a scalar and a vector as its arguments. Then it multiplies scalar and a vector and returns the updated vector.
+   '''
+  a=len(vector)
+  b=[]
+  result=[]
+  for i in range(len(vector)):
+    total=0
+    total=scalar*vector[i]
+    # vector scalar multiplication
+    result.append(total)
+  return result
+    #returns the new vector
+vector1=a
+vector2=[1,2,3]
+
+vector3=[1,2]
+vector4=[1,3,5]
+print(scalarVecMulti(vector1,vector2))
+# the test values wtih scalar and  right vector, string and matrix are being checked.
+#print(vecSubtract(vector3,vector4))
