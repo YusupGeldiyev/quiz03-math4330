@@ -2,7 +2,8 @@
 
 def dot(vector01,vector02): 
   '''
-This function takes two vectors (vector01 and vector02) as its arguments. It first checks if two vectors are the same size. If sizes are equal it then takes the dot product of two vectors then returns the result. if not it prints Error".
+This function takes two vectors (vector01 and vector02) as its arguments. It first checks if two vectors are the same size. 
+If sizes are equal it then takes the dot product of two vectors then returns the result. if not it prints Error and returns none".
    '''
   result=0
   a=len(vector01)
@@ -30,7 +31,8 @@ print(dot(vector1,vector2))
 
 def vecSubtract(vector01,vector02): 
   '''
-This function takes two vectors (vector01 and vector02) as its arguments. It first checks if two vectors are the same size. If sizes are equal it then subtracts vector02 from vector01,then returns the result which is vector. if not it prints Error".
+This function takes two vectors (vector01 and vector02) as its arguments. It first checks if two vectors are the same size. 
+If sizes are equal it then subtracts vector02 from vector01,then returns the result which is vector. if not it prints Error retruns None".
    '''
   result=[]
   # assigning an empty list to get back a new vector after calculations
@@ -76,14 +78,15 @@ vector2=[1,2,3]
 
 vector3=[1,2]
 vector4=[1,3,5]
-print(scalarVecMulti(vector1,vector2))
-# the test values wtih scalar and  right vector, string and matrix are being checked.
-#print(vecSubtract(vector3,vector4))
+print(scalarVecMulti(scalar,vector2))
+# the test values wtih scalar and  different size vectors  are being checked.
+#print(scalarVecMulti(vector3,vector4))
 
 # quiz 03 (4)
 def infNorm(vector):
   '''
-  This function takes a vector as its arguments and returns the infinty norm of that vector.it takes the aboslute value of vector values and compares it to the assigned norm if its greater than that it returns the new norm
+  This function takes a vector as its arguments and returns the infinty norm of that vector.
+  it takes the aboslute value of vector values and compares it to the assigned norm if its greater than that it returns the new norm
     '''
   norm=0
   for i in range(len(vector)):
@@ -94,16 +97,19 @@ def infNorm(vector):
       #assinging new norm if its greater than exisiting norm
   return norm
 vector1=[-3,4,-5]
-test2=word
+test2=2
 print(infNorm(vector1))
 #print(infNorm(test2))
 
 # quiz 03 (5)
 def normalize(vector):
   '''
-    This function takes a vector as its arguments and returns the normalized vector with respect to infinty norm of that vector.it takes the aboslute value of vector values and compares it to the assigned norm if its greater than that it returns the new norm after it normalizese the new given vecctor by dividing by infinity norm.
+    This function takes a vector as its argument and returns the normalized vector with respect to infinty norm of that vector.
+    it takes the aboslute value of vector values and compares it to the assigned norm if its greater than that it picks new biggest value in the list 
+    it returns the new vector after its normalizeation the new given vecctor by dividing by infinity norm(whic is the new biggest value).
       '''
   norm=infNorm(vector)
+  # function that calculates infinity norm is being assigned
   normalizedvector=[]
   #assigning empty list for new normalized vector
   for j in range(len(vector)):
@@ -111,8 +117,9 @@ def normalize(vector):
     #dividing vector values by infinite norm
     normalizedvector.append(nvector)
   return normalizedvector
+#returnig new normazlied vector with respect to infinity norm
 vector1=[2,4,6]
-test2=Word
+test2=2
 #testing valid and not valid inputs
 print(normalize(vector1))
-#print(normalize(test32))
+#print(normalize(test2))
